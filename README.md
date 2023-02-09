@@ -1,3 +1,1 @@
 # epidemic-simulator
- 
-test

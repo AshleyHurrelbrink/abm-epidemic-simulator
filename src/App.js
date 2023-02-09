@@ -25,19 +25,11 @@ const default_DELTA_RECOVER = 5
 const DELTA_SUSCEPTIBLE = 3 * 30 * day_cycles // Months
 
 const excelNames = {
-  c1: '10000_01',
-  c2: '10000_02',
-  c3: '10000_03',
-  c4: '10000_04',
-  c5: '10000_05',
+  c1: 'Results'
 }
 
 const ExcelExport = {
-  [excelNames.c1]: [],
-  [excelNames.c2]: [],
-  [excelNames.c3]: [],
-  [excelNames.c4]: [],
-  [excelNames.c5]: [],
+  [excelNames.c1]: []
 }
 
 const App = () => {
@@ -59,28 +51,6 @@ const App = () => {
   const [contagiousNr0, setContagiousNr0] = useState(0)
   const [recoveredNr0, setRecoveredNr0] = useState(0)
   const [deadNr0, setDeadNr0] = useState(0)
-  // 2
-  const [susceptibleNr1, setSusceptibleNr1] = useState(0)
-  const [contagiousNr1, setContagiousNr1] = useState(0)
-  const [recoveredNr1, setRecoveredNr1] = useState(0)
-  const [deadNr1, setDeadNr1] = useState(0)
-  // 3
-  const [susceptibleNr2, setSusceptibleNr2] = useState(0)
-  const [contagiousNr2, setContagiousNr2] = useState(0)
-  const [recoveredNr2, setRecoveredNr2] = useState(0)
-  const [deadNr2, setDeadNr2] = useState(0)
-  // 4
-  const [susceptibleNr3, setSusceptibleNr3] = useState(0)
-  const [contagiousNr3, setContagiousNr3] = useState(0)
-  const [recoveredNr3, setRecoveredNr3] = useState(0)
-  const [deadNr3, setDeadNr3] = useState(0)
-  // 5
-  const [susceptibleNr4, setSusceptibleNr4] = useState(0)
-  const [contagiousNr4, setContagiousNr4] = useState(0)
-  const [recoveredNr4, setRecoveredNr4] = useState(0)
-  const [deadNr4, setDeadNr4] = useState(0)
-
-  
 
   const resetParams = () => {
     setSTEP(default_STEP)
@@ -222,11 +192,7 @@ const App = () => {
       <div style={{textAlign: 'center', marginLeft: 'auto', marginRight: 'auto', width: '300px', color: '#222', fontSize: 32, fontWeight: 'bold', paddingTop: '35px', backgroundColor: '#aba', padding: '20px 25px', borderRadius: '10px', boxShadow: '5px 8px #888888'}}>SICARS Simulator</div>
       <div style={{display: 'flex', paddingTop: '50px'}}>
         <div style={{display: 'flex', alignItems: 'center', flexDirection: 'column', width: '70%'}}>
-          {compartmentBlock(excelNames.c1, 10000, 0.1, change_direction_probability, INFECTION_RADIUS, P_Dead, P_INFECT, DELTA_CONTAGIOUS * day_cycles, DELTA_AWARE * day_cycles, DELTA_RECOVER * day_cycles, DELTA_SUSCEPTIBLE, setSusceptibleNr0, setContagiousNr0, setRecoveredNr0, setDeadNr0, susceptibleNr0, contagiousNr0, recoveredNr0, deadNr0, () => setCounter(counter + 1))}
-          {compartmentBlock(excelNames.c2, 10000, 0.2, change_direction_probability, INFECTION_RADIUS, P_Dead, P_INFECT, DELTA_CONTAGIOUS * day_cycles, DELTA_AWARE * day_cycles, DELTA_RECOVER * day_cycles, DELTA_SUSCEPTIBLE, setSusceptibleNr1, setContagiousNr1, setRecoveredNr1, setDeadNr1, susceptibleNr1, contagiousNr1, recoveredNr1, deadNr1, () => {})}
-          {compartmentBlock(excelNames.c3, 10000, 0.3, change_direction_probability, INFECTION_RADIUS, P_Dead, P_INFECT, DELTA_CONTAGIOUS * day_cycles, DELTA_AWARE * day_cycles, DELTA_RECOVER * day_cycles, DELTA_SUSCEPTIBLE, setSusceptibleNr2, setContagiousNr2, setRecoveredNr2, setDeadNr2, susceptibleNr2, contagiousNr2, recoveredNr2, deadNr2, () => {})}
-          {compartmentBlock(excelNames.c4, 10000, 0.4, change_direction_probability, INFECTION_RADIUS, P_Dead, P_INFECT, DELTA_CONTAGIOUS * day_cycles, DELTA_AWARE * day_cycles, DELTA_RECOVER * day_cycles, DELTA_SUSCEPTIBLE, setSusceptibleNr3, setContagiousNr3, setRecoveredNr3, setDeadNr3, susceptibleNr3, contagiousNr3, recoveredNr3, deadNr3, () => {})}
-          {compartmentBlock(excelNames.c5, 10000, 0.5, change_direction_probability, INFECTION_RADIUS, P_Dead, P_INFECT, DELTA_CONTAGIOUS * day_cycles, DELTA_AWARE * day_cycles, DELTA_RECOVER * day_cycles, DELTA_SUSCEPTIBLE, setSusceptibleNr4, setContagiousNr4, setRecoveredNr4, setDeadNr4, susceptibleNr4, contagiousNr4, recoveredNr4, deadNr4, () => {})}
+          {compartmentBlock(excelNames.c1, 10000, STEP, change_direction_probability, INFECTION_RADIUS, P_Dead, P_INFECT, DELTA_CONTAGIOUS * day_cycles, DELTA_AWARE * day_cycles, DELTA_RECOVER * day_cycles, DELTA_SUSCEPTIBLE, setSusceptibleNr0, setContagiousNr0, setRecoveredNr0, setDeadNr0, susceptibleNr0, contagiousNr0, recoveredNr0, deadNr0, () => setCounter(counter + 1))}
         </div>
         <div>
           <div style={{position: 'fixed', marginLeft: '100px', width: '250px', backgroundColor: '#aba', padding: '35px 50px', borderRadius: '10px', boxShadow: '5px 8px #888888'}}>

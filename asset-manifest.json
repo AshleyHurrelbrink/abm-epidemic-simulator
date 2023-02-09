@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/abm-epidemic-simulator/static/css/main.4f35d38c.css",
+    "main.js": "/abm-epidemic-simulator/static/js/main.27865797.js",
+    "index.html": "/abm-epidemic-simulator/index.html",
+    "main.4f35d38c.css.map": "/abm-epidemic-simulator/static/css/main.4f35d38c.css.map",
+    "main.27865797.js.map": "/abm-epidemic-simulator/static/js/main.27865797.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4f35d38c.css",
+    "static/js/main.27865797.js"
+  ]
+}

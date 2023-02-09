@@ -118,10 +118,6 @@ const App = () => {
   useEffect(() => {
     if(counter % day_cycles === 0 && counter !== 0) {
       ExcelExport[excelNames.c1].push({Day: Math.round(counter / day_cycles), Susceptible: susceptibleNr0, Infected: contagiousNr0, Recovered: recoveredNr0, Dead: deadNr0})
-      ExcelExport[excelNames.c2].push({Day: Math.round(counter / day_cycles), Susceptible: susceptibleNr1, Infected: contagiousNr1, Recovered: recoveredNr1, Dead: deadNr1})
-      ExcelExport[excelNames.c3].push({Day: Math.round(counter / day_cycles), Susceptible: susceptibleNr2, Infected: contagiousNr2, Recovered: recoveredNr2, Dead: deadNr2})
-      ExcelExport[excelNames.c4].push({Day: Math.round(counter / day_cycles), Susceptible: susceptibleNr3, Infected: contagiousNr3, Recovered: recoveredNr3, Dead: deadNr3})
-      ExcelExport[excelNames.c5].push({Day: Math.round(counter / day_cycles), Susceptible: susceptibleNr4, Infected: contagiousNr4, Recovered: recoveredNr4, Dead: deadNr4})
     }
   }, [counter])
 
